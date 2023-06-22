@@ -65,10 +65,6 @@ class BluetoothManager: NSObject, ObservableObject, CBCentralManagerDelegate, CB
     @Published public var scannedPeripherals: [CBPeripheral] = []
     var timer: Timer?
     
-    /**
-            UUIDがどれの話かわからなにのでとにかく指定
-            これでも挙動が怪しい(LINE Beacon起動直後しか取れない
-     */
     let serviceUUIDs = [CBUUID(string: "FE6F")]
     
     @Published public var isUseFilter = true
